@@ -1,0 +1,8 @@
+{
+  "name": "AI Commercial IP Director",
+  "description": "您的私人 AI 商业 IP 编导，为您策划采访、录制回答，并重构为爆款短视频文案。",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
