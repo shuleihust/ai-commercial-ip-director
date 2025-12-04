@@ -1,3 +1,4 @@
+// 共享类型定义
 export interface UserProfile {
   name: string;
   product: string;
@@ -14,11 +15,11 @@ export enum TopicStatus {
 export interface InterviewTopic {
   id: string;
   question: string;
-  reasoning: string; // Why AI chose this
+  reasoning: string;
   status: TopicStatus;
   videoBlob?: Blob;
   analysis?: AnalysisResult;
-  script?: string; // User provided script/outline for teleprompter
+  script?: string;
 }
 
 export interface AnalysisResult {
@@ -35,4 +36,20 @@ export interface AnalysisResult {
     total: number;
   };
   suggestions: string[];
+}
+
+// API 请求/响应类型
+export interface GenerateTopicsRequest {
+  profile: UserProfile;
+}
+
+export interface AnalyzeVideoRequest {
+  videoBase64: string;
+  mimeType: string;
+  question: string;
+}
+
+export interface GenerateSpeechRequest {
+  text: string;
+  voiceName?: string;
 }
